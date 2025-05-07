@@ -1,4 +1,6 @@
 EXP NO:11 C PROGRAM TO DISPLAY STACK ELEMENTS USING AN ARRAY.
+Name:FRANKLIN RAJ
+Reg No: 212223230058
 
 Aim:
 To write a C program to display stack elements using an array.
@@ -12,12 +14,59 @@ Algorithm:
 7.	Use the display function to visualize the stack's contents
  
 Program:
+```
+#include <stdio.h>
+#define SIZE 5
 
-//type your code here
+int stack[SIZE];  
+int top = -1;     
+
+void push(int value) {
+    if (top == SIZE - 1) {
+        printf("Stack is full (Overflow)\n");
+    } else {
+        top++;
+        stack[top] = value;
+        printf("%d pushed to stack\n", value);
+    }
+}
+
+void pop() {
+    if (top == -1) {
+        printf("Stack is empty (Underflow)\n");
+    } else {
+        printf("%d popped from stack\n", stack[top]);
+        top--;
+    }
+}
+
+void display() {
+    if (top == -1) {
+        printf("Stack is empty\n");
+    } else {
+        printf("Stack elements:\n");
+        for (int i = top; i >= 0; i--) {
+            printf("%d\n", stack[i]);
+        }
+    }
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+    display();
+    pop();
+    display();
+    return 0;
+}
+```
 
 Output:
+![Screenshot 2025-05-07 112223](https://github.com/user-attachments/assets/0127af1b-302e-420f-aa0d-b6a336281cd1)
+![Screenshot 2025-05-07 112237](https://github.com/user-attachments/assets/721810b9-ee58-438b-b834-b8f191de657e)
+![Screenshot 2025-05-07 112250](https://github.com/user-attachments/assets/e1c0983c-2881-48f9-a202-b02546d63065)
 
-//paste your output here
 
 
 
