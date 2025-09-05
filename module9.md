@@ -86,15 +86,23 @@ Algorithm:
 4.	Call the push function as needed.
  
 Program:
-
-//type your code here
-
+```
+char stack[100];
+int size=3,top=-1; 
+void push (float data) { 
+    if(top==size-1) 
+    {
+    printf("stack is full\n");
+    } 
+    else
+    {
+        stack[top]=data; 
+    } 
+    }
+```
 Output:
 
-//paste your output here
-
-
-
+<img width="485" height="544" alt="EX-9_02" src="https://github.com/user-attachments/assets/a5f4faef-e64c-4deb-8f39-8a1298d25e8b" />
 
 Result:
 Thus, the program to push the given element in to a stack using array is verified successfully
@@ -112,12 +120,26 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
-
-//type your code here
-
+```
+int queue[50], rear=-1, front=-1; 
+void display() { 
+    if(front==-1||front>rear) 
+    {
+        printf("No elements to display");
+    }     
+    else
+    { 
+    for(int i=front;i<=rear;i++)
+    { 
+        printf("%d\n",queue[i]); 
+    }
+    }
+}
+```   
 Output:
 
-//paste your output here
+<img width="674" height="521" alt="EX-9_03" src="https://github.com/user-attachments/assets/42e1b9b4-79bd-4e8e-8388-576e2a83373d" />
+
 
 
 Result:
@@ -136,12 +158,24 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
-
-//type your code here
-
+```
+int front,rear,size=3; 
+char queue[50];
+void enqueue(char data) { 
+    if(rear<size) 
+    { if(front==-1) 
+    {
+        front=0;
+    } 
+    rear++;
+    queue[rear]=data;
+    }
+    }
+```
 Output:
 
-//paste your output here
+<img width="724" height="453" alt="EX-9_04" src="https://github.com/user-attachments/assets/e09aeb6c-24c9-4107-a868-2261a7cccb41" />
+
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
