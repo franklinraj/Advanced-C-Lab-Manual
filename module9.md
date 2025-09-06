@@ -205,12 +205,23 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 
 Program:
-
-//type your code here
-
+```
+int front, rear; 
+void dequeue() { 
+    if(front==-1||front>rear) 
+    { 
+        printf("Queue Underflow.\n");
+    } 
+    else 
+    { 
+        front++; 
+    } 
+    }
+```
 Output:
 
-//paste your output here
+<img width="824" height="620" alt="EX-9_05" src="https://github.com/user-attachments/assets/a3a5b835-b181-4e15-8ce8-d5528232806d" />
+
 
 
 Result:
